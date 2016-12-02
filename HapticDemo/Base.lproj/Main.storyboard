@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Notificaiton-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NotificationHapticVC" customModule="HapticDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CO-OX-AqW">
+                                <rect key="frame" x="-0.5" y="318" width="375" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="a2j-KU-qMA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Tap here to play selected segment notficaiton">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playNotification" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJy-JP-l1Z"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0NG-ui-But">
+                                <rect key="frame" x="42" y="265" width="290" height="29"/>
+                                <segments>
+                                    <segment title="Error"/>
+                                    <segment title="Success"/>
+                                    <segment title="Warning"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="selectionDidChange" destination="BYZ-38-t0r" eventType="valueChanged" id="wH8-Ok-FHj"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segment control below is enabled with haptic feed back. Change selection to try selection haptic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrP-8E-lX6">
+                                <rect key="frame" x="0.0" y="213" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XW9-vC-I2a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Eou-s2-J71">
+                                <rect key="frame" x="42" y="431" width="290" height="29"/>
+                                <segments>
+                                    <segment title="Light"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Heavy"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="imactSelectionDidChange" destination="BYZ-38-t0r" eventType="touchUpInside" id="ti0-Rg-EOL"/>
+                                    <action selector="selectionDidChange" destination="BYZ-38-t0r" eventType="valueChanged" id="ses-lr-80b"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change selection to feel different impacts feedback" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utd-yu-hct">
+                                <rect key="frame" x="0.0" y="379" width="375" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Eou-s2-J71" firstAttribute="centerX" secondItem="0NG-ui-But" secondAttribute="centerX" id="4bT-Tr-Cb9"/>
+                            <constraint firstItem="utd-yu-hct" firstAttribute="top" secondItem="6CO-OX-AqW" secondAttribute="bottom" constant="31" id="DBy-3i-zdq"/>
+                            <constraint firstItem="0NG-ui-But" firstAttribute="top" secondItem="JrP-8E-lX6" secondAttribute="bottom" constant="12" id="E0M-je-gz5"/>
+                            <constraint firstItem="Eou-s2-J71" firstAttribute="top" secondItem="utd-yu-hct" secondAttribute="bottom" constant="12" id="OCD-FI-WPF"/>
+                            <constraint firstItem="6CO-OX-AqW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="OMC-1Q-gdQ"/>
+                            <constraint firstItem="6CO-OX-AqW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QaG-YT-w4c"/>
+                            <constraint firstItem="6CO-OX-AqW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SIH-DW-Q6Y"/>
+                            <constraint firstItem="utd-yu-hct" firstAttribute="centerX" secondItem="JrP-8E-lX6" secondAttribute="centerX" id="TCo-Fn-yQ8"/>
+                            <constraint firstItem="0NG-ui-But" firstAttribute="centerX" secondItem="6CO-OX-AqW" secondAttribute="centerX" id="Z7R-F0-Bby"/>
+                            <constraint firstItem="Eou-s2-J71" firstAttribute="height" secondItem="0NG-ui-But" secondAttribute="height" id="fCP-8W-yV8"/>
+                            <constraint firstItem="JrP-8E-lX6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h1o-LK-8be"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0NG-ui-But" secondAttribute="trailing" constant="27" id="j38-kk-GNt"/>
+                            <constraint firstItem="0NG-ui-But" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="jiC-VV-g21"/>
+                            <constraint firstItem="6CO-OX-AqW" firstAttribute="top" secondItem="0NG-ui-But" secondAttribute="bottom" constant="25" id="mqL-mm-rZw"/>
+                            <constraint firstItem="Eou-s2-J71" firstAttribute="width" secondItem="0NG-ui-But" secondAttribute="width" id="pQL-bC-fE4"/>
+                            <constraint firstItem="utd-yu-hct" firstAttribute="height" secondItem="JrP-8E-lX6" secondAttribute="height" id="qPi-8U-hK5"/>
+                            <constraint firstItem="JrP-8E-lX6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="qSX-LH-3jj"/>
+                            <constraint firstItem="utd-yu-hct" firstAttribute="width" secondItem="JrP-8E-lX6" secondAttribute="width" id="z7n-tC-i8K"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Notificaiton" id="hDb-JH-25J"/>
+                    <connections>
+                        <outlet property="impactSegment" destination="Eou-s2-J71" id="QrO-tj-Puq"/>
+                        <outlet property="notificationSegment" destination="0NG-ui-But" id="vYb-X1-zVG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-791.20000000000005" y="-73.313343328335833"/>
         </scene>
     </scenes>
 </document>

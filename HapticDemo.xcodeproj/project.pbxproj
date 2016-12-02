@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		075DE6D51DF11D250020E47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DE6D41DF11D250020E47E /* AppDelegate.swift */; };
-		075DE6D71DF11D250020E47E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DE6D61DF11D250020E47E /* ViewController.swift */; };
+		075DE6D71DF11D250020E47E /* NotificationHapticVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DE6D61DF11D250020E47E /* NotificationHapticVC.swift */; };
 		075DE6DA1DF11D250020E47E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075DE6D81DF11D250020E47E /* Main.storyboard */; };
 		075DE6DC1DF11D250020E47E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 075DE6DB1DF11D250020E47E /* Assets.xcassets */; };
 		075DE6DF1DF11D250020E47E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075DE6DD1DF11D250020E47E /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		075DE6D11DF11D250020E47E /* HapticDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HapticDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075DE6D41DF11D250020E47E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		075DE6D61DF11D250020E47E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		075DE6D61DF11D250020E47E /* NotificationHapticVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHapticVC.swift; sourceTree = "<group>"; };
 		075DE6D91DF11D250020E47E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		075DE6DB1DF11D250020E47E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		075DE6DE1DF11D250020E47E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				075DE6D41DF11D250020E47E /* AppDelegate.swift */,
-				075DE6D61DF11D250020E47E /* ViewController.swift */,
+				075DE6D61DF11D250020E47E /* NotificationHapticVC.swift */,
 				075DE6D81DF11D250020E47E /* Main.storyboard */,
 				075DE6DB1DF11D250020E47E /* Assets.xcassets */,
 				075DE6DD1DF11D250020E47E /* LaunchScreen.storyboard */,
@@ -193,7 +193,7 @@
 				TargetAttributes = {
 					075DE6D01DF11D250020E47E = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = K8J63LCJ7A;
+						DevelopmentTeam = WE65J257FL;
 						ProvisioningStyle = Automatic;
 					};
 					075DE6E41DF11D250020E47E = {
@@ -262,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				075DE6D71DF11D250020E47E /* ViewController.swift in Sources */,
+				075DE6D71DF11D250020E47E /* NotificationHapticVC.swift in Sources */,
 				075DE6D51DF11D250020E47E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +415,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K8J63LCJ7A;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WE65J257FL;
 				INFOPLIST_FILE = HapticDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.AppTech.HapticDemo;
@@ -428,7 +429,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K8J63LCJ7A;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WE65J257FL;
 				INFOPLIST_FILE = HapticDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.AppTech.HapticDemo;
